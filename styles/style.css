@@ -1,0 +1,193 @@
+/*importando fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap');
+
+:root{ /* define as variáveis de cores e fontes */
+    /* define as cores primária, secundária e terciária */
+    --cor-primaria: black;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22D4FD;
+    --cor-hover: #272727;
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+/* seleciona todos os elementos da página */
+*{
+    /* remove a margem e o padding padrão */
+    margin:0;
+    padding:0;
+    box-sizing: border-box; /* Adicionado para evitar problemas de largura */
+}
+
+body{
+    /* garantee que o body ocupe a tela toda */
+    min-height: 100vh;
+    
+    /* usa flexbox para centralizar o conteúdo */
+    /* NÃO PRECISA MAIS DE position: relative; com o footer fixed */
+    /* NOVO: Adicionado para permitir o espaçamento para o footer fixo */
+    padding-bottom: 72px; /* O valor deve ser a altura do seu footer */
+    /* define a cor de fundo */
+    background-color: var(--cor-primaria);
+    /* define a cor do texto */
+    color: var(--cor-secundaria);
+}
+
+.cabecalho{
+   padding: 2% 0 0 15%; 
+   
+}
+
+.cabecalho_menu{
+    display:flex;
+    flex-direction: row;
+    gap: 80px;
+     
+}
+
+.cabecalho_menu_link{
+    font-family: var(--fonte-secundaria);
+    font-size:1.5rem;
+    font-weight:600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+
+.Apresentacao{
+    /* define a largura máxima do conteúdo */
+    margin: 5% 15%;
+    gap:82px;
+    align-items: center;
+    /* usa flexbox para organizar os elementos */
+    display:flex;
+    /*O flex-direction: column; organiza os elementos em uma coluna *
+    align-items: center; /* alinha os itens no centro do eixo transversal */
+    justify-content: space-between; /* distribui os itens igualmente ao longo do eixo principal */
+    }
+
+.Apresentacao__conteudo{
+    /* define a largura  do texto */
+    width: 50%;
+    display:flex;
+    /*flex-wrap;*/
+    flex-direction: column;
+    gap:40px;
+}
+
+.Apresentacao__conteudo_titulo{
+    /* define o tamanho da fonte */
+    font-size: 2.25rem;
+    font-family: var(--fonte-primaria);
+}
+
+.destaque-titulo {
+    /* define a cor do texto */
+    color: var(--cor-terciaria);
+}
+
+.Apresentacao__conteudo__paragrafo{
+    /* define o tamanho da fonte */
+    font-size: 1.5rem;
+    font-family: var(--fonte-secundaria);
+}
+
+
+.Apresentacao__links{
+    display:flex;
+    flex-direction: column; /* organiza os links em uma coluna */
+    align-items: center; /* centraliza os links horizontalmente */
+    gap: 32px; /* define o espaçamento entre os links */
+    justify-content: space-between;
+    /* define o espaçamento entre os links */
+}
+.Apresentacao__links__subtitulo{
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    font-family: 24px;
+}
+.Apresentacao__links__botao{
+    display:flex;
+    justify-content: center;
+    gap:16px;
+    align-items: center;
+    /* background-color: #22D4FD;
+    define a cor de fundo do botão */
+    border: 2px solid var(--cor-terciaria);
+    /* define a cor da borda do botão */
+    width: 50%;
+    /* define a largura do botão */
+    text-align: center;
+    /* centraliza o texto dentro do botão */
+    border-radius: 16px;
+    font-size: 1.5rem;
+    padding: 21.8px 0; /*aumenta tamanho entre conteudo e b orda, ao colocar dois numeros, vc coloca em
+*/
+    text-decoration: none; /* Tira sublindo botão*/
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    font-weight:600;
+}
+
+.Apresentacao__links__botao:hover{
+    background-color: var(--cor-hover);
+}
+
+.Apresentacao__foto{
+    /* define a largura da imagem */
+    width: 55%;
+    /* define a altura da imagem */
+    height: auto;
+    /* arredonda os cantos da imagem */
+    border-radius: 80%;
+    /* adiciona uma borda à imagem */
+    border: 2px solid var(--cor-terciaria);
+}
+
+.rodape{
+    /* NOVO: Propriedades para posicionar o footer na parte inferior, fixo na tela */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Garante que o footer fique acima de outros elementos */
+    
+    /* Estilos já definidos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-terciaria);
+    color:var(--cor-primaria);
+    font-size: 1.5rem;
+    padding: 24px 0;
+}
+
+
+@media(max-width:1200px){
+    .Apresentacao{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .Apresentacao__conteudo{
+        width: auto;
+    }
+    .cabecalho{
+        padding: 10%;
+    
+    }
+    .cabecalho_menu{
+        justify-content: center;
+    }
+
+    .rodape{
+       position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0; /* Adicionado para garantir que o footer se estenda até a borda direita */
+    z-index: 1000; /* Garante que o footer fique acima de outros elementos */
+    padding: 16px 0;
+}
+
+}
