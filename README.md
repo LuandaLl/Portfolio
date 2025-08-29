@@ -13,7 +13,6 @@ HTML e CSS: trabalhando com responsividade e publicação de projetos
 Ao acessar a pagina, temos o home com um breve resumo. 
 Na aba sobre, é onde está descrito acerca de minhas certificções e objetivos.
 Caso queira ver o projeto funcionando basta clicar no link: [Portifolio](https://amigo-secreto-phi.vercel.app/](https://portfolio-seven-gamma-10.vercel.app/about.html)
-))
 
 
 
